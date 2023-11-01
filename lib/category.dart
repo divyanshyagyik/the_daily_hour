@@ -19,7 +19,14 @@ class _CategoryState extends State<Category> {
     if(query == "Top News" || query == "India"){
       url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=a073eca936284190907e0fbf3c0f7ce2";
 
-    }else{
+    }
+    else if(query == "Health"){
+      url ="https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=a073eca936284190907e0fbf3c0f7ce2";
+    }
+    else if(query == "Finance"){
+      url ="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=a073eca936284190907e0fbf3c0f7ce2";
+    }
+    else{
       url ="https://newsapi.org/v2/top-headlines?country=us&apiKey=a073eca936284190907e0fbf3c0f7ce2";
     }
 

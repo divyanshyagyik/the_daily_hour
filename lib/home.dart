@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
     "Top News",
     "India",
     "World",
-    "Finacnce",
+    "Finance",
     "Health"
   ];
 
@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
   }
 
   getNewsofIndia() async {
-    String url = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=a073eca936284190907e0fbf3c0f7ce2";
+    String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=a073eca936284190907e0fbf3c0f7ce2";
     Response response = await get(Uri.parse(url));
     Map data = jsonDecode(response.body);
     setState(() {
@@ -357,7 +357,7 @@ class _HomeState extends State<Home> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          Category(Query: "Technology")));
+                                          Category(Query: "India")));
                             },
                             child: Text("SHOW MORE")),
                       ],
